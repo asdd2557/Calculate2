@@ -6,31 +6,31 @@ import java.util.Scanner;
 public class Calculate {
     private int num1;
     private int num2;
-    private boolean while_switch1 = true;
-    private boolean while_switch2 = true;
-    private boolean while_switch3 = true;
+    private boolean whileSwitch1 = true;
+    private boolean whileSwitch2 = true;
+    private boolean whileSwitch3 = true;
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Calculate calculate = new Calculate();
         while (true) {
 
-            if (calculate.while_switch1) {
+            if (calculate.whileSwitch1) {
                 try {
                     System.out.print("첫 번째 숫자를 입력하세요: ");
                     calculate.num1 = calculate.scanner.nextInt();
-                    calculate.while_switch1 = false;
+                    calculate.whileSwitch1 = false;
                 } catch (Exception e) {
                     System.out.println("잘못된 입력입니다. 숫자를 입력해 주세요.");
                     calculate.scanner.nextLine();
                     continue;
                 }
             }
-            if (calculate.while_switch2) {
+            if (calculate.whileSwitch2) {
                 try {
                     System.out.print("두 번째 숫자를 입력하세요: ");
                     calculate.num2 = calculate.scanner.nextInt();
-                    calculate.while_switch2 = false;
+                    calculate.whileSwitch2 = false;
                 } catch (Exception e) {
                     System.out.println("잘못된 입력입니다. 숫자를 입력해 주세요.");
                     calculate.scanner.nextLine();
@@ -63,8 +63,8 @@ public class Calculate {
             if (Objects.equals(calculate.scanner.next(), "n")) {
                 break;
             }
-            calculate.while_switch1 = true;
-            calculate.while_switch2 = true;
+            calculate.whileSwitch1 = true;
+            calculate.whileSwitch2 = true;
 
 
         }
